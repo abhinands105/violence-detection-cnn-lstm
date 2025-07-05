@@ -26,3 +26,30 @@ violence-detection-cnn-lstm/
 ├── README.md              # Project overview and usage instructions
 ├── requirements.txt       # All required dependencies
 ├── .gitignore             # Files/folders to be excluded from Git
+
+
+
+
+
+
+---
+
+## 🔧 Requirements
+- Python 3.8+
+- TensorFlow, OpenCV, Matplotlib, NumPy
+- Kaggle CLI
+- Telegram Bot API
+
+---
+
+## 🚀 Quick Start
+1. Clone the repo
+2. Set up Kaggle credentials
+3. Run `scripts/extract_frames.py`
+4. Train using `scripts/train_model.py`
+5. Test with `scripts/test_model.py`
+
+---
+
+## 📜 License
+MIT License © Abhinand S
