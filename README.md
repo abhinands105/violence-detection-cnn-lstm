@@ -1,55 +1,28 @@
-# Violence Detection using CNN + LSTM 🚨
+# Violence Detection using CNN + LSTM
 
-This project is a complete deep learning pipeline to detect violence in videos using frame sequences. It uses a CNN + LSTM model trained on the [RWF-2000 dataset](https://www.kaggle.com/datasets/vulamnguyen/rwf2000) and includes adversarial testing, real-time alerts, and environmental robustness checks.
+An end-to-end deep learning pipeline to detect violence in videos using CNN + LSTM, frame extraction, adversarial/environmental testing, and real-time Telegram alerts.
 
----
+## 📁 Scripts Overview
 
-## 🧠 Features
-- CNN + LSTM model for spatiotemporal video analysis
-- Frame extraction & classification
-- Adversarial testing (occlusion, sports, clothing, motion)
-- Environmental testing (brightness, contrast, blur, nighttime)
-- Speed robustness (slow/fast motion)
-- Telegram bot alert system
-- Training visualization & evaluation reports
-
----
-
-## 📁 Project Structure
-violence-detection-cnn-lstm/
-├── dataset/               # Raw and organized video data
-├── frames/                # Extracted frames from videos
-├── models/                # Saved models (.h5) and training logs
-├── scripts/               # All Python scripts (training, testing, etc.)
-├── logs/                  # TensorBoard logs or training logs
-├── results/               # Evaluation outputs, graphs, predictions
-├── README.md              # Project overview and usage instructions
-├── requirements.txt       # All required dependencies
-├── .gitignore             # Files/folders to be excluded from Git
-
-
-
-
-
-
----
-
-## 🔧 Requirements
-- Python 3.8+
-- TensorFlow, OpenCV, Matplotlib, NumPy
-- Kaggle CLI
-- Telegram Bot API
-
----
+| Script | Description |
+|--------|-------------|
+| `extract_frames.py` | Extracts and categorizes frames from videos |
+| `train_model.py` | Trains a CNN + LSTM model on frame sequences |
+| `test_model.py` | Predicts violence in new videos using the trained model |
+| `balance_dataset.py` | Ensures balanced dataset by limiting video counts per class |
+| `adversarial_test.py` | Adds occlusions and motion blur to test robustness |
+| `env_variation_test.py` | Applies lighting, blur, and night effects |
+| `telegram_alert.py` | Sends alerts via Telegram when violence is detected |
 
 ## 🚀 Quick Start
-1. Clone the repo
-2. Set up Kaggle credentials
-3. Run `scripts/extract_frames.py`
-4. Train using `scripts/train_model.py`
-5. Test with `scripts/test_model.py`
 
----
+1. Extract frames: `python scripts/extract_frames.py`
+2. Train model: `python scripts/train_model.py`
+3. Test model: `python scripts/test_model.py`
 
-## 📜 License
-MIT License © Abhinand S
+## 📦 Requirements
+
+- TensorFlow
+- OpenCV
+- NumPy
+- Requests (for Telegram bot)
